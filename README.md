@@ -1,6 +1,7 @@
 # Loci Radial Distribution Analysis
  
 Fiji macro for Loci Radial Distribution Analysis
+Similar to methods used in https://lens.elifesciences.org/28975/
 
 *Requires 3D ImageJ Suite
 
@@ -28,18 +29,10 @@ Add random seeding for validation - this is measuring only Channel of Interest (
 If the SNR is high enough you should be able to use auto-detection in most cases. In cases where auto-detection is not appropriate a 3D manual selection and a 2D manual selection are available. The 2D manual selection allows you to select the loci from a Maximum Intensity Projection image, but will subsequently search for the loci in 3D space - this is a fast manual approach and has worked well in my hands on the test data. In my hands it takes ~3 minutes to process a 2GB image.
 
 The output from the pipeline includes:
-•	3 tables recording the raw radial distribution measurements (measured on the channel of interest (COI) at the loci site, the loci channel at the same location, and the COI at some randomly seeded sites within the nuclei).
-o	Image_Name_Raw_Radial_Distribution_Ch_x.csv
-•	3 tables recording the normalized radial distribution measurements (normalized to center intensity with the minimum intensity subtracted - from a value outside the nucleus)
-o	Image_Name_Normalized Radial_Distribution_Ch_x.csv
-•	3 custom summary tables including the values we discussed: center intensity, 250nm sphere mean intensity, and surrounding nucleus mean intensity, along with ratios of these.
-o	Image_Name_Summary_of_Loci_Measurements_Ch_x.csv
-•	A validation image which shows the loci channel raw data, and the centroids of the detected loci - useful to validate the performance of the loci detection
-o	Image_Name_Loci_validation.tif
-•	A 3D image with spheres plotted at the loci locations with their intensity being the normalized COI intensity at center (e.g. 0.7 = 70) allows easy visualization of sites that correlated with the loci.
-o	Image_Name_Loci_Intensity_COI_Ch_x.tif
-•	A 3D image with spheres in the loci locations with their intensity being the sphere to nucleus ratio (x100, so a ratio of 2.52 = 252)
-o	Image_Name_Loci_250_Sphere_Nuclueus_Ratio.tif
-•	An image file containing all the detected loci, each slice is an image at the center of the loci and the surrounding area. It's a good image to use to visualize each loci and compare with the measurements.
-o	Image_Name_Loci_Locations.tif
-
+- 3 tables recording the raw radial distribution measurements (measured on the channel of interest (COI) at the loci site, the loci channel at the same location, and the COI at some randomly seeded sites within the nuclei). - Image_Name_Raw_Radial_Distribution_Ch_x.csv
+- 3 tables recording the normalized radial distribution measurements (normalized to center intensity with the minimum intensity subtracted - from a value outside the nucleus) - Image_Name_Normalized Radial_Distribution_Ch_x.csv
+- 3 custom summary tables including the values we discussed: center intensity, 250nm sphere mean intensity, and surrounding nucleus mean intensity, along with ratios of these. -	Image_Name_Summary_of_Loci_Measurements_Ch_x.csv
+- A validation image which shows the loci channel raw data, and the centroids of the detected loci - useful to validate the performance of the loci detection - 	Image_Name_Loci_validation.tif
+- A 3D image with spheres plotted at the loci locations with their intensity being the normalized COI intensity at center (e.g. 0.7 = 70) allows easy visualization of sites that correlated with the loci. -Image_Name_Loci_Intensity_COI_Ch_x.tif
+- A 3D image with spheres in the loci locations with their intensity being the sphere to nucleus ratio (x100, so a ratio of 2.52 = 252) - Image_Name_Loci_250_Sphere_Nuclueus_Ratio.tif
+- An image file containing all the detected loci, each slice is an image at the center of the loci and the surrounding area. It's a good image to use to visualize each loci and compare with the measurements. - Image_Name_Loci_Locations.tif
