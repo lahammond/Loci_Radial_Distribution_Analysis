@@ -6,7 +6,7 @@ Developed for Richard Mann Lab, Columbia University. 2019
 
 *Requires 3D ImageJ Suite
  
-For the detection of gene loci and subsequent analysis of protein distribution around this loci.
+For the detection of gene loci and subsequent analysis of signal or other loci around this location.
 Loci are detected and radial distribution is analyzed in channels of interest and average distribution is generated (normalised to 1) and background subtracted (lowest value - outside of nucleus - assumed to be 0). Plot of intensity normalised 1 but also variance curves of distribution can be plotted as spheres in original image, allowing for spatial analysis.
 
 Similar to methods used in https://lens.elifesciences.org/28975/
