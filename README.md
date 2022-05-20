@@ -3,12 +3,13 @@
 Fiji macro for Loci Radial Distribution Analysis
 
 Developed for Richard Mann Lab, Columbia University. 2019
-Similar to methods used in https://lens.elifesciences.org/28975/
 
 *Requires 3D ImageJ Suite
  
 For the detection of gene loci and subsequent analysis of protein distribution around this loci.
 Loci are detected and radial distribution is analyzed in channels of interest and average distribution is generated (normalised to 1) and background subtracted (lowest value - outside of nucleus - assumed to be 0). Plot of intensity normalised 1 but also variance curves of distribution can be plotted as spheres in original image, allowing for spatial analysis.
+
+Similar to methods used in https://lens.elifesciences.org/28975/
 
 Update May 16th 2019
 Automatic detection uses thresholded region - then extracts local volume, performs maxima detection, then plots centroid back into the data
