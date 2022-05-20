@@ -2,6 +2,7 @@
  
 Fiji macro for Loci Radial Distribution Analysis
 
+Developed for Richard Mann Lab, Columbia University. 2019
 Similar to methods used in https://lens.elifesciences.org/28975/
 
 *Requires 3D ImageJ Suite
